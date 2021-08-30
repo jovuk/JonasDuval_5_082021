@@ -1,0 +1,143 @@
+@media screen and (min-width: 771px) {
+    .card {
+        width: 65%;
+        margin: 20px auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    #basket {
+        margin-top: 60px;
+    }
+
+    #orderForm {
+        width: 40rem;
+        margin: 0 auto;
+    }
+
+    .list-group-item.d-flex.justify-content-between.align-items-center > span {
+        margin: 5px 20px;
+    }
+
+    .list-group-item.d-flex.justify-content-between.align-items-center > img {
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .card {
+        margin: 20px auto;
+        padding: 0;
+        text-align: center;
+    }
+    .list-group-item.d-flex.justify-content-between.align-items-center{
+        flex-wrap: wrap;
+    }
+    .list-group-item.d-flex.justify-content-between.align-items-center > span{
+        margin: 20px;
+    }
+    #basket {
+        margin-top: 30px;
+        padding-right: 0;
+    }
+
+    .row{
+       justify-content: center;
+        margin: 10px;
+    }
+
+    #sum{
+        width: 80%;
+    }
+
+    #orderForm {
+        margin: 0 auto;
+    }
+}
+
+.container.product {
+    max-width: 700px;
+}
+
+.container.order {
+    margin: 80px auto;
+}
+
+.orderInfo {
+    padding: 20px;
+}
+
+#parent{
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#lenses, #quantity{
+    margin: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #a03131;
+}
+
+figcaption{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#basket > li > span:first-child{
+    padding: 0 40px;
+}
+
+#sum {
+    border: 2px solid #a03131;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    font-weight: bolder;
+}
+
+.imageBasket{
+    width: 10%;
+}
+
+#orderConfirm{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.bg-primary{
+    background-color: #a03131!important;
+}
+
+.badge.bg-primary.rounded-pill {
+    color: white;
+    padding: 8px;
+}
+
+.btn.btn-outline-primary{
+    border-color: #a03131;
+    color: #a03131;
+}
+
+.btn.btn-outline-primary:hover{
+    background-color: #a03131;
+    color: white;
+}
+
+.btn.btn-primary{
+    background-color: #a03131;
+    border-color: #a03131;
+    color: white;
+}
+
+.btn.btn-primary:hover{
+    background-color: #731616;
+    border-color:  #731616;
+    color: white;
+}

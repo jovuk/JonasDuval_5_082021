@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="js/function.js" defer></script>
+    <script src="js/panier.js" defer></script>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/shopping-cart--v2.png" />
+    <title>Votre panier</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo.png" alt="Logo Orinoco" width="55" height="24">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" aria-current="page" href=index.html>Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="panier.html">Panier <span class="badge rounded-pill bg-danger" hidden='' id="basketPreview">$</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- emptyBasket -->
+        <section id="emptyBasket" hidden= "">
+            <div class="container my-3 py-1">
+                <div class="text-center my-5 shadow p-3 mb-5 bg-body rounded">
+                    <h1 class="fs-1 font-weight-bold text-secondary my-5">Oops, votre panier semble vide, commencez vos achats
+                    </h1>
+                    <a role="button" class="btn btn-secondary text-uppercase my-3" href="index.html">C'est par
+                        ici</a>
+                </div>
+            </div>`
+        </section>
+        <div class="row">
+            <ul class="list-group" id="basket">
+            </ul>
+            <!-- <button class= "btn btn-danger" type="button" hidden="" id = "removeBasket">Supprimer le panier</button> -->
+        </div>
+        <div class="row sum">
+            <div class="col-sm"></div>
+            <div class="col-sm" hidden id="sum"></div>
+            <div class="col-sm" >           
+                 <div class="col-sm my-4 mr-5">
+                    <button type="button" class="btn btn-danger mx-5" id="buttonRemoveBasket" data-bs-toggle="modal" data-bs-target="#modalClearBasket">Vider le panier</button>
+                </div>
+             </div>       
+        </div>
+<!-- Modal -->
+        <div class="modal fade" tabindex="-1" id="modalClearBasket" aria-labelledby="modalClearBasket" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Suppression panier</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Voulez-vous vraiment supprimer le panier ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="modalRemoveBasket">Oui</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Non</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <form id="orderForm" method="post" hidden="" action="http://localhost:3000/api/cameras/order" enctype="multipart/form-data">
+            <label>Prénom</label>
+            <input type="text" class="form-control" name="firstName" placeholder="Alice" required/>
+            <label>Nom</label>
+            <input type="text" name="lastName" class="form-control"  placeholder="Jacquot" required/>
+            <label>Adresse</label>
+            <input type="text" name="address" class="form-control" placeholder="8 rue Jean Lauret" required />
+            <label>Ville</label>
+            <input type="text" name="city" class="form-control" placeholder="Lille" required>
+            <label>Adresse mail</label>
+            <input type="email" name="email" class="form-control" required placeholder="alice.jacquot@gmail.com">
+            <button type="submit" id="orderConfirm" class="btn btn-primary">Passer ma commande !</button>
+        </form>
+    </div>
+</body>
+</html>
