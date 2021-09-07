@@ -1,5 +1,5 @@
-/***********Mise à jour du basketPreview***********/
-basketPreview();
+//Mise à jour du basketPreview
+basketPreviewFunction();
 /*********** Get DOM element ***********/
 const basket = document.getElementById('basket');
 const sum = document.getElementById('sum');

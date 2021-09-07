@@ -1,6 +1,5 @@
-/***********Mise à jour du basketPreview***********/
-basketPreview();
-
+//Mise à jour du basketPreview
+basketPreviewFunction();
 /*********** Get data from the API with a promise ***********/
 get("http://localhost:3000/api/cameras")
     .then(function (data) {
@@ -10,7 +9,6 @@ get("http://localhost:3000/api/cameras")
         }
     })
     .catch(error => alert("Erreur : " + error));
-
 /*********** Creation of a card ***********/
 function createCards(src, name, description, price, id) {
     const firstDiv = document.createElement('div');
@@ -44,3 +42,4 @@ function createCards(src, name, description, price, id) {
 
     return firstDiv;
 }
+

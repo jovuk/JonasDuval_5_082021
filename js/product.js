@@ -1,3 +1,5 @@
+//Mise à jour du basketPreview
+basketPreviewFunction();
 /*********** Get DOM Elements ***********/
 const img = document.getElementsByClassName('card-img-top')[0];
 const h5 = document.getElementsByClassName('card-title')[0];
@@ -29,6 +31,7 @@ function addToBasket(id, name, description, price, imageUrl){
         productsLocalStorage.push(...articleInLocalStorage, product)
         const productToSet = removeNull(productsLocalStorage.flat(4));
         localStorage.setItem("productsOrdered", JSON.stringify(productToSet));
+        document.location.reload();
     })
 }
 
@@ -40,15 +43,6 @@ function alertMessage(parent){
     alert.setAttribute('role', 'alert');
     alert.innerText = 'Le produit a été ajouté au panier ! ';
     parent.insertBefore(alert, addProduct);
-}
-
-/*********** basketPreview ***********/
-function basketPreview() {
-    if (localStorage.length == 0) {
-    } else {
-        let addBasketPreview = document.getElementById("basketPreview");
-        addBasketPreview.removeAttribute("hidden");
-    }
 }
 
 /*********** Add product data and option ***********/
