@@ -51,7 +51,7 @@ function getId() {
 const basketPreview = document.getElementById ('basketPreview');
 function basketPreviewFunction() {
     if (localStorage.length >= 1) { 
-        basketPreview.innerHTML = `Panier <span class="badge rounded-pill bg-danger align-middle my-auto">$</span>`;
+        basketPreview.innerHTML = `Panier <span class="badge rounded-pill bg-danger align-middle my-auto">€</span>`;
     } 
 }
 /*********** Clear basket ***********/
